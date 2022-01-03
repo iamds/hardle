@@ -66,7 +66,7 @@ const adultWords = ["cigar", "rebut", "sissy", "humph", "awake", "blush", "focal
         }
 
         function getHiddenWords() {
-            return [...adultWords];
+            return [...childWords];
             //return [childWords[Math.floor(Math.random() * childWords.length)]];
         }
 
@@ -77,7 +77,7 @@ const adultWords = ["cigar", "rebut", "sissy", "humph", "awake", "blush", "focal
             const inputRef = React.useRef(null);
 
             function setValue(val) {
-                val = val.toLowerCase();
+                val = val.toLowerCase().trim();
                 if(val.length > 5) {
                     _setValue(val.substr(0,5));
                 } else {
